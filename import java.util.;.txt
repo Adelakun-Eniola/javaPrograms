@@ -1,0 +1,19 @@
+import java.util.*;
+public class Calculator{
+	public static void main(String [] args){
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("Enter the Radius Of A Circle");
+		int radiusEntered = scanner.nextInt();
+
+		double pi = 3.142;
+
+		double diameter = 2*radiusEntered;
+
+		double circumference = 
+	}
+
+
+
+
+
+}

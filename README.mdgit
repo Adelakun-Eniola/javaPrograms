@@ -1,0 +1,2 @@
+"# javaPrograms"  initgit add README.mdgit commit -m "first commit"git branch -M maingit remote add origin https://github.com/boylax23/javaPrograms.gitgit push -u origin main
+"# javaPrograms"  initgit add README.mdgit commit -m "first commit"git branch -M maingit remote add origin https://github.com/boylax23/javaPrograms.gitgit push -u origin main

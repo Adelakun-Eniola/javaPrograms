@@ -1,0 +1,28 @@
+import java.util.*;
+public class Windows{
+	public static void main(String[] args){
+		Scanner input = new scanner(System.in);
+		System.out.println("Please Enter A Number:");
+		int number1 = input.nextInt();
+
+		System.out.println("Please Enter Another Number:");
+		int number2 = input.nextInt();
+
+		System.out.println("The Square if the two Numbers Are:");
+		int square1 = number1*number1;
+		int square2 = number2*number2;
+		System.out.println(square1 \n square2);
+
+		System.out.println("The Sum Of Their Squares Is:");
+		int totalSquare =  sqaure1+square2;
+		System.out.println(totalSquare);
+
+		System.out.println("The Difference Of Their Squares Is:");
+		int totalSquare2 =  sqaure1 - square2;
+		System.out.println(totalSquare2);
+
+	}
+
+
+
+}

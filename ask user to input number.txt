@@ -1,0 +1,20 @@
+ask user to input number
+generate random number
+if user_input = random number = correct
+if user_input is greater than random print too high
+if user_input is less than random print too low
+
+
+
+
+
+while(randomNumber){
+			if (randomNumber >numberAccepted){
+				System.out.printf("%s Is Too Low", numberAccepted);
+			}
+			else{
+				System.out.printf("%s Is Too High", numberAccepted);
+			}
+			
+			numberAccepted++;
+		}

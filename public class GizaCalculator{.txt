@@ -1,0 +1,30 @@
+public class GizaCalculator{
+		Scanner scanner = new Scanner();  
+	public static void main(String [] args){
+		Scanner input = new Scanner (System.in);
+		System.out.println("A Program To Calculate The Giza Buildup:");
+		
+		System.out.println	("Please Enter The Estimated Number Of Stones Used:");
+		double numOfStones = input.nextDouble();
+
+		System.out.println	("Please Enter The Average Weight Of Each Stone:");
+		double weightOfStones = input.nextDouble();
+
+		System.out.println	("Please Enter The  Number Of Years Used :");
+		double numOfyears = input.nextDouble();
+	
+		
+		
+	} 
+
+
+}
+
+
+
+
+
+
+//2.3million stones
+//2.5 to 15 tons
+//20 yearpin
