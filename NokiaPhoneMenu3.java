@@ -62,7 +62,7 @@ public static void userSelection(){
 			}break;
 			
 		case 3: System.out.println("Chat"); break;
-
+		
 		case 4:
 		System.out.println("---Call Register---");
 		String menuFour = """
@@ -75,9 +75,42 @@ public static void userSelection(){
 			7.Call cost settings
 			8.Prepaid credit
 		""";
+		System.out.println(menuFour);
+		
+		Scanner newMenu4 = new Scanner(System.in);
+		System.out.println("Please Enter A Selection:");
+		int numberFour = newMenu4.nextInt();
+		
+		switch(numberFour){
+			case 1:
+			System.out.println("Missed Calls"); break;
+			case 2:
+			System.out.println("Received Calls"); break;
+			case 3:
+			System.out.println("Dialled Number"); break;
+
+			case 4:
+			System.out.println("Erase Recent Call Lists"); break;
+
+			case 5:callDuration(); break;
+			case 6: callCost(); break;
+			case 7: callCostSettings(); break;
+			
 
 		}
+		case 5: tonesSettings(); break;
+		case 6: settings(); break;
+		case 7: System.out.println("CALL DIVERT"); break;
+		case 8: System.out.println("GAMES"); break;
+		case 9: System.out.println("Calculator"); break;
+		case 10: System.out.println("Reminder"); break;
+		case 11: clock();
+		case 12: System.out.println("Profiles"); break;
+		case 13: System.out.println("SIM Services"); break;
+
+
 	}
+}
 		public static void phoneBook() {
 			String menuOptionOne = """ 
 				--- PHONE BOOK---
@@ -91,6 +124,7 @@ public static void userSelection(){
 				8: Options
 				9: Speed Dials
 				10: Voice Tags
+				11. Go Back
 				""";
 			System.out.println(menuOptionOne);
 			Scanner newMenuForOprionOne = new Scanner(System.in);
@@ -107,6 +141,7 @@ public static void userSelection(){
 				case 8: options(); break;
 				case 9: System.out.println("Speed dials"); break;
 				case 10: System.out.println("Voice Tags"); break;
+				case 11: back(); break;
 			
 			} 
 }
@@ -124,6 +159,11 @@ public static void userSelection(){
 					System.out.println("Memory Status"); break;
 					}
 
+			}
+			
+			public static void back(){
+				System.out.println("Go back");
+				userSelection();
 			}
 
 			public static void messageSettings(){
@@ -168,7 +208,195 @@ public static void userSelection(){
 						}
 
 					}
+}
+			public static void callDuration(){
+				System.out.println("Show Call Duration"); 
+				System.out.println("     1.Last Call Duration");
+				System.out.println("     2.All Calls Duration");
+				System.out.println("     3.Received Calls' Duration");
+				System.out.println("     4.Dialled Calls' Duration");
+				System.out.println("     5.Clear Timer");
+				Scanner newSubInput5 = new Scanner(System.in);
+				System.out.println("Enter An Option:");
+				int num4 = newSubInput5.nextInt();
+				switch(num4){
+					case 1:System.out.println("Last Call Duration"); break;
+					case 2:System.out.println("All Calls Duration"); break;
+					case 3: System.out.println("Received Calls' Duration"); break;
+					case 4: System.out.println("Dialled Calls' Duration"); break;
+					case 5: System.out.println("Clear Timer"); break;
+				}
+
+			}
+			public static void callCost(){
+				System.out.println("Show call costs"); 
+			System.out.println("     1.Last Call Cost");
+			System.out.println("     2.All calls cost");
+			System.out.println("     3.Clear counters");
+
+			Scanner newSubInput6 = new Scanner(System.in);
+			System.out.println("Enter An Option:");
+			int numberFive = newSubInput6.nextInt();
+			switch(numberFive){
+					case 1:System.out.println("Last Call Cost"); break;
+					case 2:System.out.println("All Calls Cost"); break;
+					case 3: System.out.println("Clear Counter"); break;
+			} 
+		
 	
 	}
+		public static void callCostSettings(){
+		System.out.println("---CALL COST SETTINGS---");
+			System.out.println("     1.Call cost limit");
+			System.out.println("     2. Show costs in");
 
+			Scanner newSubInput7 = new Scanner(System.in);
+			System.out.println("Enter An Option:");
+			int numberSix = newSubInput7.nextInt();
+			switch(numberSix){
+					case 1:System.out.println("Call cost limit"); break;
+					case 2:System.out.println("Show costs in"); break;
+			} 
+		}
+		public static void tonesSettings(){
+			System.out.println("TONE SETTINGS");
+			String menuFive = """
+			1.Ringing tone
+			2.Ringing volume
+			3.Incoming call alert
+			4. Composer
+			5.Message alert tone
+			6.Keypad tones
+			7.Warning and game tones
+			8. Vibrating alert
+			9. Screen saver
+			""";
+			System.out.println(menuFive);
+		
+		System.out.println("Please Choose:");
+		Scanner sc = new Scanner(System.in);
+		int numberForTones = sc.nextInt();
+		switch(numberForTones){
+		case 1: System.out.println("Ringing tone"); break;
+		case 2: System.out.println("Ringing volume"); break;
+		case 3: System.out.println("Incoming Call Alert"); break;
+		case 4: System.out.println("Composer"); break;
+		case 5: System.out.println("Message Alert Tone"); break;
+		case 6: System.out.println("Keypad Tones"); break;
+		case 7: System.out.println("Warning And Game Tones"); break;
+		case 8: System.out.println("Vibrating Alert"); break;
+		case 9: System.out.println("Screen Saver"); break;
+		}
+
+		}
+		
+		public static void settings(){
+			System.out.println(" SETTINGS");
+			String menuSix = """
+			1.Call settings
+			2.Phone settings
+			3.Security settings
+			4. Restore factory settings
+					""";
+			System.out.println(menuSix);
+			
+			Scanner newMenu6 = new Scanner(System.in);
+			System.out.println("Please Enter A Selection:");
+			int number6 = newMenu6.nextInt();
+		
+			switch(number6){
+			case 1: System.out.println("Call Settings:");
+			String subMenuSix = """
+			1.Automatic redial
+			2.Speed dialling
+			3.Call waiting options
+			4.Own number sending
+			5. Phone line in use
+			6.Automatic answer
+					""";
+			System.out.println(subMenuSix);
+			
+			Scanner case6Number6 = new Scanner(System.in);
+			System.out.println("Please Choose");
+			int chosenNumber6 = case6Number6.nextInt();
+			switch(chosenNumber6){
+				case 1: System.out.println("Automatic redial"); break;
+				case 2: System.out.println("Speed dialling"); break;
+				case 3: System.out.println("Call waiting options"); break;
+				case 4: System.out.println("Own number sending"); break;
+				case 5 : System.out.println("Phone line in use"); break;
+				case 6: System.out.println("Automatic answer"); break;
+			}
+			case 2:System.out.println("Phone Settings");
+			String subMenuSix2 = """ 
+			1. Language
+			2. Cell info display
+			3. Welcome note
+			4. Network selection
+			5. Lights
+			6. Confirm SIM service actions
+			""";
+			System.out.println(subMenuSix2);
+			Scanner case6Number7 = new Scanner(System.in);
+			System.out.println("Please Choose");
+			int chosenNumber6s = case6Number7.nextInt();
+			switch(chosenNumber6s){case 1: System.out.println("Language"); break;
+			case 2: System.out.println("Cell Info Display"); break;
+			case 3: System.out.println("Welcome note"); break;
+			case 4: System.out.println("Network selection"); break;
+			case 5: System.out.println("Lights"); break;
+			case 6: System.out.println("Confirm SIM service actions"); break;
+			} break;
+
+			case 3:System.out.println("Security settings");
+			String subMenuSix3 = """
+			1. PIN code request
+			2. Call barring service
+			3. Fixed dialling
+			4. Closed user group
+			5. Phone security
+			6. Change access codes
+			""";
+			System.out.println(subMenuSix3);
+			Scanner case6Number8 = new Scanner(System.in);
+			System.out.println("Please Choose");
+			int chosenNumber6SubSetting3 = case6Number8.nextInt();
+			switch(chosenNumber6SubSetting3){case 1: System.out.println("PIN code request"); break;
+			case 2:  System.out.println("Call barring service"); break;
+			case 3: System.out.println("Fixed dialling"); break;
+			case 4: System.out.println("Closed user group"); break;
+			case 5: System.out.println("Phone security"); break;
+			case 6: System.out.println("Change access codes"); break;
+			} break;
+			
+			case 4:System.out.println("Restore Factory settings"); break;
+
+
+		}
+
+}
+		public static void clock(){
+			System.out.println("CLOCK");
+			String lastSubMenu11= """ 
+			1. Alarm clock
+			2. Clock settings
+			3. Date setting
+			4. Stopwatch
+			5. Countdown timer
+			6. Auto update of date and time
+			""";
+			System.out.println(lastSubMenu11);
+			System.out.println("Choose:");
+			Scanner subMenu11 = new Scanner(System.in);
+			int chosenNumber11 = subMenu11.nextInt();
+			switch(chosenNumber11){
+				case 1: System.out.println("Alarm Clock"); break;
+				case 2: System.out.println("Clock Setting"); break;
+				case 3: System.out.println("Date Setting"); break;
+				case 4: System.out.println("Stopwatch"); break;
+				case 5: System.out.println("Countdown Timer"); break;
+				case 6: System.out.println("Auto update of date and time"); break;
+			} 
+
+}
 }
