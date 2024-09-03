@@ -2,7 +2,7 @@ import java.util.*;
 public class passwordEncrypt{
 	public static void main(String [] args){
 	Scanner sc = new Scanner(System.in);
-	System.out.println("Enter five digit: ");
+	System.out.println("Enter four digit: ");
 	int numberAccepted = sc.nextInt();
 
 
@@ -10,11 +10,14 @@ public class passwordEncrypt{
 	int digitTwo = (numberAccepted/1000)%10;
 	int digitThree = (numberAccepted/100)%10;
 	int digitFour = (numberAccepted/10)%10;
-	int digitFive = (numberAccepted/10);
 
 
 	int firstDigit = (digitOne + 7)%10;
-	
+	int secondDigit = (digitTwo + 7)% 10;
+	int thirdDigit = (digitThree + 7)% 10;
+	int fourthDigit = (digitFour + 7)% 10;
+
+	int encryptedInteger = 
 	}
 
 
