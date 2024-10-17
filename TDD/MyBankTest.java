@@ -1,5 +1,6 @@
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 public class MyBankTest{
 
@@ -63,7 +64,7 @@ public class MyBankTest{
 		double amountDeposited = 20_000;
 		Account sender = new Account();
 		
-		sender.deposit(amountDeposited);
+		sender.deposit(amountDeposited); 
 	    //when
 		double debitAmount = 4_000;
 		sender.debitFunds(debitAmount, sender);
@@ -92,19 +93,16 @@ public class MyBankTest{
 	
 	
 	}
+	@Test
+	public void testThatArraysCanSwap(){
+		//given
+		int [] arrays= {1,2,3};
+		//when
+		int [] expected = {1,2,3};
+		//check
+		assertArrayEquals(arrays, expected);
+	}
 
 
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
