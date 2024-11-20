@@ -1,51 +1,54 @@
 import java.util.Scanner;
+import java.util.Arrays;
+
 public class indexTask{
 	public static void main(String [] args){
-	    Scanner scan = new Scanner(System.in);
-	    
-	    System.out.println("How Many Scores Do You Want To Collect?");
-	    int acceptedScores = scan.nextInt();
-	    
-	    final int LENGTH = acceptedScores;
-	    int [] c =  new int[LENGTH];
+	   
+	int[] array = {2, 1, 4, 3, 5, 9};
+        System.out.println("Before: "+ Arrays.toString(array));
+        arraySort(array);
+        System.out.println( Arrays.toString(array));
+	System.out.println(Arrays.toString(outerdex));
 
-
-	    int total = 0;
-	    int average = 0;
-	    int maxxNum = 0;
-	    int minNum = 0;
-
-
-	    for(int index =0; index< c.length; index++){
-	        System.out.println("Entre A Numbre: ");
-		
-	        c[index] = scan.nextInt();
-		
-	        total = total + c[index];
-	        average = total/2;  
-	    
-	    }
-	    
-	    
-	    for(int index = 0; index < c.length; index++){
-	    
-	        System.out.println(c[index]);
-		
-		if(c[index] > maxxNum) maxxNum = c[index];
-	    }
-	
-	    for(int jupyter=0; jupyter < c.length; jupyter++){
-	    
-	        if(c[jupyter] < maxxNum) minNum = c[jupyter];
-	    
-	    }
-	    
-	    System.out.println("Average is: "+ average);
-	    System.out.println("highest is: " + maxxNum);
-	    System.out.println("lowest is: " + minNum);
-	    
-  
 	}
 
 
+	 public static void arraySort(int[] array) {
+	        for (int index = 0; index < array.length; index++) {
+            for (int outdex = index + 1; outdex < array.length; outdex++) {
+                if (array[index] > array[outdex]) {
+		     
+                    int cup = array[index];
+                    array[index] = array[outdex];
+                    array[outdex] = cup;
+                }
+            }
+        }
+	
 }
+
+
+
+	public static int productArray(int [] array){
+		int [] square = new int[array.length];
+
+		for(int outerdex = 0; outerdex < array.length; outerdex++){
+		square[outerdex] = array[outerdex] * array[outerdex]; 
+		}
+		return outerdex;
+		
+
+	}
+}
+
+
+
+
+
+
+
+
+
+     
+
+   

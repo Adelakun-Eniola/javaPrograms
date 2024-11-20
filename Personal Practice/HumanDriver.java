@@ -5,7 +5,7 @@ public class HumanDriver{
 		
 		System.out.println("Human1 name is " + human1.getName());
 
-		human1.setName("Adam");
+		human1.setName("Adam"); 
 		human1.setAge(10);
 		System.out.println("Human1 name is " + human1.getName());
 		System.out.println(human1.getName() + " age is " + human1.getAge());
