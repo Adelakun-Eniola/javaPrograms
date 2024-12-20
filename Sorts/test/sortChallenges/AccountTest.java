@@ -1,56 +1,40 @@
 package sortChallenges;
-
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class AccountTest {
-
     @Test
-    public void testThatAccountDepositWorks(){
-        //Given
-        int balance = 0;
-        //When
-        int deposit = 500;
-        Account.deposit(deposit);
-        //Check
-        int newBalance = deposit+ balance;
-        assertEquals(newBalance, Account.deposit(deposit));
+    public void testThatAccountCanDeposit() {
+        Account account = new Account("WEWW","1234","07084159495");
+        account.deposit(100);
+        double balance = account.getBalance("1234");
+        int result = 100;
+        assertEquals(result,balance);
     }
-
-
     @Test
-    public void  testThatBalanceIsUpdated(){
-        //Given
-        Account acc = new Account();
-        //When
-        int amount  = -50;
-        acc.testnegativeCantWithdraw(amount);
-        //Check
+    public void testThatAccountCanWithdraw() {
+        Account account = new Account("WEWW","1234","07084159495");
+        account.deposit(1500);
+        account.withdraw(1000,"1234");
+        double balance = account.getBalance("1234");
         int result = 500;
-        assertEquals(result, acc.testnegativeCantWithdraw(amount));
-
+        assertEquals(result,balance);
     }
     @Test
-    public void thatwithdrawalWorks(){
-        //Given
-        Account acc = new Account();
-        int funds = 500;
-        //When
-        acc.testICanWithdraw(funds);
-        //check
-        int balance = 200;
-        assertEquals(balance, acc.testICanWithdraw(funds));
+    public void testThatAccountCanWithdraw2() {
+        Account account = new Account("WEWW","1234","07084159495");
+        account.deposit(1500);
+        account.withdraw(1000,"1234");
+        double balance = account.getBalance("1234");
+        assertEquals(balance,500);
     }
-
     @Test
-    public void testICannotWithdrawPassInitialAmount(){
-        //Given
-        Account acc = new Account();
-        //when
-        acc.testICannotWithdrawMoreThanDeposit();
-        //check
-        int returned = 500;
-        assertEquals(returned, acc.testICannotWithdrawMoreThanDeposit());
+    public void testThatAccountCanWithdraw3() {
+        Account account = new Account("WEWW","1234","07084159495");
+        account.deposit(1500);
+        account.withdraw(1000,"1234");
+        double balance = account.getBalance("1234");
+        assertEquals(balance,500);
     }
 }

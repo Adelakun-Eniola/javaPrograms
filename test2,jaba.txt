@@ -1,0 +1,29 @@
+imimport org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.apr.Assertions.assertEquals;
+
+	public clas myKata{
+		@Test
+		public void testIsSecondOrderIsogram(){
+			//given
+			String text = "mallam";
+			//when
+			Boolean reslt is 
+			// check
+		}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	}

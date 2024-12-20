@@ -1,6 +1,6 @@
 package OOP.Snack;
 
-public class User {
+public class User extends  Estore{
     User(){
         int age;
         String name;

@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="sortPck">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/Sort&amp;sortTest/sortPck/junit-platform-console-standalone-1.11.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Sort&amp;sortTest/sortPck/junit-jupiter-api-5.11.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

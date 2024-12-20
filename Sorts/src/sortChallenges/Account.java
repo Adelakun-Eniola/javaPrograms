@@ -1,25 +1,40 @@
 package sortChallenges;
-
 public class Account {
-    int total = 500;
-    public static int deposit(int amount) {
-        return amount;
+    private double balance;
+    private String name;
+    private String password;
+    private String number;
+
+    public Account(String name, String password, String number) {
+        this.name = name;
+        this.password = password;
+        this.number = number;
     }
-
-
-    public int testnegativeCantWithdraw(int amount) {
-        return 500;
+    public void deposit(double amount) {
+        if (amount <= 0) throw new IllegalArgumentException("Invalid deposit amount");
+        balance += amount;
     }
-
-    public int testICanWithdraw(int funds) {
-        int withdraw = 300;
-        int balance = funds - withdraw;
+    public double getBalance(String password) {
+        verifyPassword(password);
         return balance;
     }
+    public void withdraw(double amount, String password) {
+        verifyPassword(password);
 
-    public int testICannotWithdrawMoreThanDeposit() {
-        int userWithdrawal = 600;
-        if(userWithdrawal > total);
-        return total;
+        if (amount <= 0) throw new IllegalArgumentException("Invalid withdraw amount");
+        if (amount > balance) throw new IllegalArgumentException("Insufficient balance");
+        balance -= amount;
+
+    }
+    public String getAccountNumber() {
+        return generateAccountNumber(number);
+    }
+    private String generateAccountNumber(String number) {
+        return number.substring(1);
+    }
+
+    private void verifyPassword(String password) {
+        if (!this.password.equals(password)) throw new IllegalArgumentException("Invalid password");
     }
 }
+
