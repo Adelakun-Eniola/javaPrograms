@@ -7,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class eAppTest {
 
     @Test
-    public void testThatUsersCanVote(){
+    public void testThatUsersCanVotewithId(){
         eApp app = new eApp();
         User user = app.createAccount(1, "Eniola");
         int numberOfUsers = eApp.getNumberOfUsers();

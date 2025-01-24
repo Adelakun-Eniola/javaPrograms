@@ -7,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class UserTest {
     User user = new User("Eniola");
     @Test
-    public void testThatUserExists(){
+    public void testThatUserAccountIsCreated(){
         String name = "";
         String expected = User.input(name);
         String result  = "";

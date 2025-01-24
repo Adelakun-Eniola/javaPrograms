@@ -9,6 +9,10 @@ public class VotersApp {
     public static void main(String[] args) {
         contestants();
     }
+//    public static void numberOfUsers(){
+//        System.out.println("How Many Voters Are There::");
+//    }
+
 
      public static void contestants(){
         String conteestants = """
@@ -32,7 +36,13 @@ public class VotersApp {
     }
 
     public static void mainMenu(String sc){
-        
+        createUserName();
     }
+
+    private static void createUserName() {
+        String name = input("Enter Your Name:");
+        contestants();
+    }
+
 
 }
