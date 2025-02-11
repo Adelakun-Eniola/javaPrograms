@@ -33,6 +33,7 @@ public class Patient extends User {
 //    }
 
     public Patient(String firstName, String lastName, String dateOfBirth, String gender, String occupation, String typeOfIllness, String address, String email, String phoneNumber) {
+
         super(firstName, lastName, email, phoneNumber, address, userId);
     }
 

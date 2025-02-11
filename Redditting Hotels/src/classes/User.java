@@ -36,7 +36,23 @@ public class User {
         return userId;
     }
 
-    protected String getFirstName() {
+    public void setFirstName(String firstName, String lastName){
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
+
+
+    public String getFirstName() {
+        try {
+
+            String stringPattern = ".*";
+            if (!Pattern.matches(stringPattern, firstName)) {
+                throw new IllegalArgumentException("Input must be a string.");
+            }
+            System.out.println("Valid input: " + firstName);
+        } catch (IllegalArgumentException e) {
+            System.err.println("Error: " + e.getMessage());
+        }
         return firstName;
     }
 
@@ -50,7 +66,17 @@ public class User {
     }
 
     public String getPhoneNumber() {
-        return phoneNumber;
+        try {
+
+            String stringPattern = ".*";
+            if (!Pattern.matches(stringPattern, firstName)) {
+                throw new IllegalArgumentException("Input must be a string.");
+            }
+            System.out.println("Valid input: " + firstName);
+        } catch (IllegalArgumentException e) {
+            System.err.println("Error: " + e.getMessage());
+        }
+        return firstName;
     }
 
     private void validatePhoneNumber(String phoneNumber) {
@@ -62,12 +88,30 @@ public class User {
         }
     }
 
+
+
     private String validateEmail(String email) {
         String emailRegex = "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$";
         if (!Pattern.matches(emailRegex, email)) {
             return "Invalid email";
         }
         return email;
+    }
+
+
+
+    public String validateLastName(String lastName){
+        try {
+
+            String stringPattern = ".*";
+            if (!Pattern.matches(stringPattern, lastName)) {
+                throw new IllegalArgumentException("Input must be a string.");
+            }
+            System.out.println("Valid input: " + lastName);
+        } catch (IllegalArgumentException e) {
+            System.err.println("Error: " + e.getMessage());
+        }
+        return lastName;
     }
 
 //    @Override

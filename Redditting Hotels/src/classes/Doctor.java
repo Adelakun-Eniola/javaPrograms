@@ -1,5 +1,8 @@
 package classes;
 
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+
 public class Doctor extends User{
     private String role;
 
@@ -15,6 +18,5 @@ public class Doctor extends User{
     public String getRole(){
         return role;
     }
-
 
 }
