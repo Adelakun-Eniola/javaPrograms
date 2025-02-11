@@ -12,6 +12,23 @@ public class ItemsTest {
     Items items = new Items();
 
 
+<<<<<<< HEAD
+    @Test
+    public void saveItems() {
+        Item item = new Item("TestItem", "nothing", 4000);
+        Item saved = items.save(item);
+        long noOfItem = items.count();
+        assertEquals(1, noOfItem);
+    }
+
+    @Test
+    public void findbyID(){
+        
+    }
+
+
+}
+=======
         @Test
         public void saveItems() {
 
@@ -31,3 +48,4 @@ public class ItemsTest {
     }
 
 }
+>>>>>>> acad4e47e9c8249ea511c2705e5ec241a6cae0e1
